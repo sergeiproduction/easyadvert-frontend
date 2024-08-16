@@ -1,0 +1,41 @@
+// Шрифты
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: 'Open Sans', sans-serif;
+
+// Размеры шрифтов
+$font-size-base: 14px;
+$font-size-small: 12px;
+$font-size-large: 16px;
+$font-size-heading1: 36px;
+$font-size-heading2: 28px;
+$font-size-heading3: 24px;
+
+// Начертания шрифтов
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Базовые цвета
+$basic-color-1: #FF005A;
+$basic-color-2: #AD0626;
+
+// Дополнительные цвета
+$additional-color-1: #FFFFFF;
+$additional-color-2: #F2F2F2;
+$additional-color-3: #999999;
+$additional-color-4: #666666;
+$additional-color-5: #1A1A1A;
+
+// Градиенты
+$gradient-1: linear-gradient(to right, $basic-color-1, $basic-color-2);
+
+// Радиусы границ
+$border-radius-small: 10px;
+$border-radius-large: 20px;
+
+// Размер тени
+$box-shadow-basic: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+// Прочее
+// $checked-color: #4891ff;
+// $error-color: #FF0000;

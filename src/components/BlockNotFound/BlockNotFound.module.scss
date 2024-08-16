@@ -1,0 +1,49 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $additional-color-2;
+}
+
+.content {
+  text-align: center;
+  padding: 2rem;
+  background-color: $additional-color-1;
+  border-radius: $border-radius-large;
+  box-shadow: $box-shadow-basic;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: $additional-color-5;
+}
+
+.message {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: $additional-color-4;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: $font-weight-bold;
+  color: $additional-color-1;
+  border: none;
+  border-radius: $border-radius-small;
+  cursor: pointer;
+  background: $gradient-1;
+  background-size: 200% 200%; // Увеличиваем размер градиента
+  background-position: 0 0; // Начальная позиция градиента
+  transition: background-position 0.3s ease; // Плавный переход для background-position
+
+  &:hover {
+    background-position: 100% 0; // Изменяем позицию градиента при наведении
+  }
+}

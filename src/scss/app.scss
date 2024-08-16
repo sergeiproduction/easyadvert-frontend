@@ -1,0 +1,38 @@
+@import "./fonts";
+@import "./variables";
+
+/* Весь HTML */
+* {
+  /* Основные настройки шрифта */
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+
+  /* Удаление отступов и полей */
+  padding: 0;
+  margin: 0;
+
+  /* Настройки для списков */
+  list-style: none;
+  outline: none;
+
+  /* Настройки для box-sizing */
+  -moz-box-sizing: border-box; /* Поддержка для старых версий Firefox */
+  -webkit-box-sizing: border-box; /* Поддержка для старых версий Safari */
+  box-sizing: border-box; /* Устанавливает box-sizing для всех элементов */
+}
+
+html {
+  /* Настройки для адаптивного изменения размера текста */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /* Настройки сглаживания шрифтов */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  /* Установка фонового цвета */
+  background-color: $additional-color-1;
+}
