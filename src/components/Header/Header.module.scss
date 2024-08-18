@@ -1,0 +1,83 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.header {
+  background-color: $additional-color-1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 1400px;
+  margin: 0 auto;
+  height: 2.5rem;
+}
+
+.logo svg {
+  height: 100%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    min-width: 500px;
+    margin-left: 1.5rem;
+    border: 1px solid $additional-color-3; // Граница для общего элемента
+    border-radius: $border-radius-small; // Радиус границы для общего элемента
+    overflow: hidden; // Скрыть переполнение
+
+    input {
+        padding: 0.5rem;
+        border: none; // Убираем границу у input
+        outline: none; // Убираем обводку при фокусе
+        flex: 1; // Позволяет input занимать оставшееся пространство
+    }
+
+    .searchButton {
+        background-color: transparent; // Прозрачный фон
+        border: none; // Убираем границу
+        cursor: pointer; // Курсор в виде указателя
+        padding: 0.5rem; // Отступы для кнопки
+        display: flex; // Центрируем иконку
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1); // Эффект при наведении
+        }
+    }
+
+    .searchIcon {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: $additional-color-5;
+    }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    text-decoration: none;
+
+    svg {
+      margin-right: 0.3rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      color: $additional-color-5;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

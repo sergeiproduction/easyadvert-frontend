@@ -36,3 +36,9 @@ body {
   /* Установка фонового цвета */
   background-color: $additional-color-1;
 }
+
+a {
+  /* Настройки для ссылок */
+  text-decoration: none;
+  color: $additional-color-5;
+}

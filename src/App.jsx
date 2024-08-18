@@ -4,13 +4,17 @@ import { useDispatch } from "react-redux";
 
 import "./scss/app.scss";
 
-// import MainLayout from "./layouts/MainLayout";
+import LayoutMain from "./layouts/LayoutMain";
 
 import NotFound from "./pages/NotFound";
 
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<LayoutMain />}>
+        {/* <Route path="" element={<Home />} /> */}
+      </Route>
+
       {/* Страница не найдена */}
       <Route path="*" element={<NotFound />} />
     </Routes>
