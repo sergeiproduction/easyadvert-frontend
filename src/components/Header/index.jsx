@@ -15,9 +15,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.logo}>
+        <a href="/" className={styles.logo}>
           <SvgLogo />
-        </div>
+        </a>
         <div className={styles.search}>
             <input type="text" placeholder="Поиск..." />
             <button className={styles.searchButton}>

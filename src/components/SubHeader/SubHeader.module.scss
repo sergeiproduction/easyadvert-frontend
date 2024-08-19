@@ -1,0 +1,65 @@
+@import "../../scss/variables";
+
+.subheader {
+  background-color: $additional-color-1;
+  height: 2rem;
+  position: relative;
+  top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: $additional-color-1; // Фон блока
+  border-radius: $border-radius-small; // Скругление углов
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Тень блока
+  height: 2rem;
+  // margin: 0 0.5rem; // Отступы между блоками
+}
+
+.link {
+  color: $additional-color-4;
+  text-decoration: none;
+  margin: 0 0.5rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.separator {
+  width: 1px;
+  height: 1rem;
+  background-color: $additional-color-3;
+  margin: 0 0.5rem;
+}
+
+.locationButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: $additional-color-4;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.locationIcon {
+  margin-right: 0.3rem;
+  color: $additional-color-4;
+}
