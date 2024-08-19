@@ -4,16 +4,31 @@ import styles from "./Subheader.module.scss";
 import { MdLocationOn } from "react-icons/md";
 
 const Subheader = () => {
+  const userRole = parseInt(localStorage.getItem("user_role")); // Получаем роль пользователя из локального хранилища
+
+  const handleRoleChange = (role) => {
+    localStorage.setItem("user_role", role); // Сохраняем роль в локальном хранилище
+    window.location.reload(); // Обновляем страницу
+  };
+
   return (
     <div className={styles.subheader}>
       <div className={styles.container}>
         <div className={styles.block}>
-          <Link to="/performers" className={styles.link}>
-            Исполнителям
+          <Link
+            to="#"
+            className={`${styles.link} ${userRole === 0 ? styles.activeLink : ""}`}
+            onClick={() => handleRoleChange(0)}
+          >
+            Рекламодателям
           </Link>
           <span className={styles.separator}></span>
-          <Link to="/advertisers" className={styles.link}>
-            Рекламодателям
+          <Link
+            to="#"
+            className={`${styles.link} ${userRole === 1 ? styles.activeLink : ""}`}
+            onClick={() => handleRoleChange(1)}
+          >
+            Исполнителям
           </Link>
         </div>
         <div className={styles.block}>
