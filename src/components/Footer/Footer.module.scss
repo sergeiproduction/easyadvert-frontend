@@ -1,0 +1,71 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.footer {
+  background-color: $additional-color-2; /* Цвет фона футера */
+  padding: 2rem 0; /* Отступы */
+  text-align: center; /* Выравнивание текста по центру */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Верхняя граница футера */
+
+  .container {
+    display: flex;
+    justify-content: space-around; /* Распределение элементов */
+    flex-wrap: wrap; /* Перенос элементов на новую строку */
+    width: 1400px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрирование */
+  }
+
+  h3 {
+    margin-bottom: 1rem; /* Отступ снизу заголовка */
+  }
+
+  ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+  }
+
+  li {
+    margin: 0.5rem 0; /* Отступы между элементами списка */
+  }
+
+  a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: $additional-color-5; /* Цвет текста */
+    transition: color 0.3s; /* Плавный переход цвета */
+
+    &:hover {
+      color: $basic-color-1; /* Цвет при наведении */
+    }
+  }
+
+  .socialIcons {
+    display: flex; /* Выравнивание иконок */
+    justify-content: center; /* Центрирование иконок */
+    margin-top: 0.5rem; /* Отступ сверху */
+
+    a {
+      margin: 0 0.5rem; /* Отступы между иконками */
+      color: $additional-color-5; /* Цвет иконок */
+      transition: color 0.3s; /* Плавный переход цвета */
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      &:hover {
+        color: $basic-color-1; /* Цвет иконок при наведении */
+      }
+    }
+  }
+
+  .copyRight {
+    margin-top: 2rem; /* Отступ сверху */
+    font-size: 0.9rem; /* Размер шрифта */
+    color: $additional-color-4; /* Цвет текста */
+    p {
+      width: 1400px;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Топ Исполнителей",
+  "items": [
+    {
+      "name": "Восход",
+      "metric": "9.94"
+    },
+    {
+      "name": "Grape",
+      "metric": "9.85"
+    },
+    {
+      "name": "Progression",
+      "metric": "9.78"
+    },
+    {
+      "name": "Instinct",
+      "metric": "9.73"
+    },
+    {
+      "name": "Depot",
+      "metric": "9.68"
+    },
+    {
+      "name": "Voskhod",
+      "metric": "9.66"
+    },
+    {
+      "name": "Setters",
+      "metric": "9.65"
+    },
+    {
+      "name": "Contrapunto",
+      "metric": "9.62"
+    },
+    {
+      "name": "Hungry Boys",
+      "metric": "9.61"
+    },
+    {
+      "name": "Possible",
+      "metric": "9.63"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.topList {
+  background-color: $additional-color-1; // Цвет фона блока
+  border-radius: $border-radius-small;     // Скругление углов
+  padding: 1rem;                           // Внутренние отступы
+  box-shadow: $box-shadow-basic;           // Эффект тени
+}
+
+.title {
+  font-size: 1.5rem;                       // Размер шрифта заголовка
+  margin-bottom: 1rem;                     // Отступ снизу
+  color: $additional-color-5;              // Цвет заголовка
+}
+
+.list {
+  list-style-type: none;                   // Убираем маркеры списка
+  padding: 0;                              // Убираем отступы у списка
+}
+
+.listItem {
+  display: flex;                           // Используем flex для размещения элементов
+  align-items: center;                     // Центрирование элементов по вертикали
+  justify-content: space-between;          // Размещаем элементы по краям
+  padding: 0.5rem 0;                       // Отступы сверху и снизу
+  border-bottom: 1px solid $additional-color-2; // Разделительная линия между элементами
+
+  &:last-child {
+    border-bottom: none;                   // Убираем разделительную линию у последнего элемента
+  }
+}
+
+.itemNumber {
+  font-size: 1rem;                         // Размер шрифта для номера элемента
+  color: $additional-color-3;              // Цвет текста номера
+  margin-right: 0.3rem;                    // Отступ справа от номера
+  min-width: 1.5rem;                         // Минимальная ширина для выравнивания
+}
+
+.itemName {
+  font-size: 1rem;                         // Размер шрифта для имени элемента
+  color: $additional-color-4;              // Цвет текста имени
+  flex-grow: 1;                            // Позволяет имени занимать оставшееся пространство
+}
+
+.itemMetric {
+  font-size: 1rem;                         // Размер шрифта для метрики
+  color: $additional-color-3;              // Цвет текста метрики
+  min-width: 60px;                         // Минимальная ширина для выравнивания
+}

@@ -2,8 +2,11 @@
 @import "../../scss/fonts";
 
 .header {
+  position: sticky; /* Прикрепляет шапку к верхней части окна */
+  top: 0; /* Отступ от верхней части окна */
+  z-index: 1000; /* Убедитесь, что шапка находится поверх других элементов */
   background-color: $additional-color-1;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: $box-shadow-basic;
   height: 4rem;
   display: flex;
   align-items: center;

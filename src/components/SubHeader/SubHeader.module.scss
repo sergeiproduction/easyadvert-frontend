@@ -3,13 +3,11 @@
 .subheader {
   background-color: $additional-color-1;
   height: 2rem;
-  position: relative;
-  top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 1400px;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .container {
@@ -24,7 +22,7 @@
   padding: 0 1rem;
   background-color: $additional-color-1; // Фон блока
   border-radius: $border-radius-small; // Скругление углов
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Тень блока
+  box-shadow: $box-shadow-basic; // Тень блока
   height: 2rem;
   // margin: 0 0.5rem; // Отступы между блоками
 }

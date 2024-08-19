@@ -1,0 +1,115 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.card {
+  display: flex; // Используем flex для размещения изображения и контента
+  max-height: 200px; // Максимальная высота карточки
+//   outline: 1px solid rgba(0, 0, 0, 0.2); // Граница карточки
+  box-shadow: $box-shadow-basic;
+  border-radius: $border-radius-small; // Скругление углов
+  padding: 0; // Убираем внутренние отступы
+  margin-top: 1rem; // Отступ сверху
+  transition: box-shadow 0.3s; // Плавный эффект тени
+
+  &:hover {
+    box-shadow: $box-shadow-basic; // Эффект тени при наведении
+    cursor: pointer;
+
+    // Изменение цвета заголовка при наведении на карточку
+    .title {
+      color: $basic-color-1; // Замените на нужный цвет при наведении
+    }
+  }
+}
+
+.imageContainer {
+  height: 200px; // Высота контейнера изображения
+  width: 200px; // Ширина контейнера изображения
+  flex-shrink: 0; // Не сжимать контейнер изображения
+  position: relative; // Для позиционирования заглушки
+
+  .placeholder {
+    width: 100%; // Ширина заглушки
+    height: 100%; // Высота заглушки
+    background-color: $additional-color-2; // Цвет фона заглушки
+    display: flex; // Используем flex для центрирования текста
+    align-items: center; // Центрирование по вертикали
+    justify-content: center; // Центрирование по горизонтали
+    color: $additional-color-3; // Цвет текста заглушки
+    font-size: 0.8rem; // Размер шрифта заглушки
+    border-radius: $border-radius-small; // Скругление углов заглушки
+  }
+}
+
+.mainPhoto {
+  width: 100%; // Ширина изображения
+  height: 100%; // Высота изображения
+  object-fit: cover; // Обрезка изображения для заполнения контейнера
+  border-radius: $border-radius-small; // Скругление углов изображения
+}
+
+.content {
+  flex-grow: 1; // Позволяет контенту занимать оставшееся пространство
+  padding: 1rem; // Внутренние отступы для контента
+  display: flex; // Используем flex для размещения элементов
+  flex-direction: column; // Вертикальное расположение элементов
+  justify-content: space-between; // Размещаем элементы с равными отступами
+}
+
+.titleContainer {
+  display: flex; // Используем flex для размещения элементов в заголовке
+  align-items: center; // Центрирование по вертикали
+  justify-content: space-between; // Размещение элементов по краям
+}
+
+.title {
+  font-size: 1.2rem; // Размер шрифта заголовка
+  color: $additional-color-5; // Цвет заголовка
+  transition: color 0.3s;
+}
+
+.icon {
+  font-size: 1.5rem; // Размер шрифта иконок
+  color: $additional-color-4; // Цвет иконок
+}
+
+.socialIcon {
+  margin-right: 0.5rem; // Отступ справа от иконки соцсети
+}
+
+.favoriteIcon {
+  margin-left: auto; // Отталкиваем иконку избранного вправо
+  cursor: pointer; // Указатель при наведении на иконку
+
+  svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+.favorited {
+  color: $basic-color-1; // Цвет иконки избранного при добавлении в избранное
+}
+
+.description {
+  color: $additional-color-4; // Цвет описания
+  margin: 0.5rem 0; // Отступы сверху и снизу
+}
+
+.footer {
+  display: flex; // Используем flex для размещения цены и просмотров
+  justify-content: space-between; // Размещение элементов по краям
+  align-items: center; // Центрирование по вертикали
+  margin-top: auto; // Отталкиваем блок вниз
+}
+
+.price {
+  font-size: 1.2rem; // Размер шрифта цены
+  // font-weight: $font-weight-bold; // Жирный шрифт
+  margin: 0.5rem 0; // Отступы сверху и снизу
+}
+
+.views {
+  font-size: 0.8rem; // Размер шрифта для просмотров
+  color: $additional-color-3; // Цвет для просмотров
+}

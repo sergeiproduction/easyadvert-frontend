@@ -1,0 +1,18 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.recommendations {
+    background-color: $additional-color-1; // Цвет фона блока
+    border-radius: $border-radius-small;     // Скругление углов блока
+    margin-top: 1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;        // Размер шрифта заголовка
+    color: $additional-color-5;            // Цвет заголовка
+  }
+  
+  .cardsContainer {
+    display: flex;          // Используем flexbox для размещения карточек
+    flex-direction: column; // Вертикальное расположение карточек
+  }

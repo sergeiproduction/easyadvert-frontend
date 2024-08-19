@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Subheader.module.scss";
 import { MdLocationOn } from "react-icons/md";
 
@@ -7,38 +8,38 @@ const Subheader = () => {
     <div className={styles.subheader}>
       <div className={styles.container}>
         <div className={styles.block}>
-          <a href="#" className={styles.link}>
+          <Link to="/performers" className={styles.link}>
             Исполнителям
-          </a>
+          </Link>
           <span className={styles.separator}></span>
-          <a href="#" className={styles.link}>
+          <Link to="/advertisers" className={styles.link}>
             Рекламодателям
-          </a>
+          </Link>
         </div>
         <div className={styles.block}>
-          <a href="#" className={styles.link}>
+          <Link to="/search?platform=youtube" className={styles.link}>
             YouTube
-          </a>
+          </Link>
           <span className={styles.separator}></span>
-          <a href="#" className={styles.link}>
+          <Link to="/search?platform=vk" className={styles.link}>
             VK
-          </a>
+          </Link>
           <span className={styles.separator}></span>
-          <a href="#" className={styles.link}>
+          <Link to="/search?platform=telegram" className={styles.link}>
             Telegram
-          </a>
+          </Link>
           <span className={styles.separator}></span>
-          <a href="#" className={styles.link}>
+          <Link to="/search?platform=twitch" className={styles.link}>
             Twitch
-          </a>
+          </Link>
           <span className={styles.separator}></span>
-          <a href="#" className={styles.link}>
+          <Link to="/search?platform=rutube" className={styles.link}>
             Rutube
-          </a>
+          </Link>
           <span className={styles.separator}></span>
-          <a href="#" className={styles.link}>
+          <Link to="/search?platform=yandex-dzen" className={styles.link}>
             Яндекс.Дзен
-          </a>
+          </Link>
         </div>
         <div className={styles.block}>
           <button className={styles.locationButton}>

@@ -1,0 +1,64 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.banner {
+    background-image: url('../../../public/img/DSC_0825.jpg'); // Укажите путь к вашему изображению
+    background-size: cover; // Заполнение всего блока
+    background-position: center; // Центрирование изображения
+    height: 200px; // Высота баннера (можно настроить)
+    border-radius: $border-radius-small;
+    position: relative; // Для позиционирования затемнения
+
+    // Затемнение
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.1); // Затемнение с прозрачностью
+        z-index: 1; // Позиционирование под текстом
+    }
+
+    .overlay {
+        position: relative; // Для размещения текста поверх затемнения
+        z-index: 2; // Позиционирование текста над затемнением
+        color: white; // Цвет текста
+        padding: 1.5rem; // Отступы внутри баннера
+        display: flex;
+        flex-direction: column; // Вертикальное выравнивание
+        justify-content: flex-start; // Выравнивание текста по верхней части
+        height: 100%; // Занимает всю высоту баннера
+    }
+
+    .title {
+        font-weight: bold; // Жирный текст
+        font-size: 1.5rem; // Размер шрифта заголовка
+        margin: 0; // Убираем отступы
+    }
+
+    .description {
+        margin: 0.5rem 0; // Отступы между заголовком и описанием
+    }
+
+    .linkContainer {
+        margin-top: auto; // Отодвигаем кнопку вниз
+        display: flex; // Для центрирования кнопки
+        justify-content: flex-start; // Выравнивание кнопки по левому краю
+    }
+
+    .readLink {
+        background-color: $additional-color-1; // Цвет кнопки (можно настроить)
+        color: $additional-color-5; // Цвет текста кнопки
+        border: none; // Убираем границу
+        border-radius: $border-radius-small;
+        padding: 0.8rem 3rem; // Отступы внутри кнопки
+        cursor: pointer; // Курсор указатель
+        transition: background-color 0.3s; // Плавный переход цвета
+
+        &:hover {
+            background-color: $additional-color-2; // Цвет кнопки при наведении
+        }
+    }
+}

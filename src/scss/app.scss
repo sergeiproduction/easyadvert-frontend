@@ -42,3 +42,32 @@ a {
   text-decoration: none;
   color: $additional-color-5;
 }
+
+.content {
+  width: 1400px;
+  margin: 1rem auto; // Отступ сверху 1 rem и центрирование по горизонтали
+  display: flex;
+  
+  // Временные свойства
+  // border: solid 1px $additional-color-5;
+}
+
+.containerColumns {
+  display: flex; // Используем Flexbox для выравнивания колонок
+  width: 100%; // Занимаем всю ширину родительского блока
+}
+
+.leftColumn {
+  width: 1040px; // Ширина левой колонки
+
+  // Временные свойства
+  // border: solid 1px $additional-color-5;
+}
+
+.rightColumn {
+  width: 320px; // Ширина правой колонки
+  margin-left: auto; // Выравнивание по правому краю
+
+  // Временные свойства
+  // border: solid 1px $additional-color-5;
+}

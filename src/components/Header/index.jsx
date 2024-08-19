@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Импортируем Link
 import styles from "./Header.module.scss";
 
 import SvgLogo from "../../svg/SvgLogo";
@@ -15,36 +16,32 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <a href="/" className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           <SvgLogo />
-        </a>
+        </Link>
         <div className={styles.search}>
-            <input type="text" placeholder="Поиск..." />
-            <button className={styles.searchButton}>
-                <MdSearch className={styles.searchIcon} />
-            </button>
+          <input type="text" placeholder="Поиск..." />
+          <button className={styles.searchButton}>
+            <MdSearch className={styles.searchIcon} />
+          </button>
         </div>
         <nav className={styles.nav}>
-          <a href="/login">
-            {/* Иконка входа */}
+          <Link to="/login">
             <MdPersonOutline />
             Войти
-          </a>
-          <a href="/orders">
-            {/* Иконка заказов */}
+          </Link>
+          <Link to="/orders">
             <MdOutlineShoppingBag />
             Заказы
-          </a>
-          <a href="/favorites">
-            {/* Иконка избранного */}
+          </Link>
+          <Link to="/favorites">
             <MdFavoriteBorder />
             Избранное
-          </a>
-          <a href="/cart">
-            {/* Иконка корзины */}
+          </Link>
+          <Link to="/cart">
             <MdOutlineShoppingBasket />
             Корзина
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
