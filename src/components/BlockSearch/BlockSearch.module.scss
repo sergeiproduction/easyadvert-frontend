@@ -1,0 +1,91 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.searchBlock {
+  background-color: $additional-color-1;
+  padding: 1rem;
+}
+
+.header {
+  display: flex; // Используем flexbox для размещения заголовка и кнопок
+  justify-content: space-between; // Размещаем элементы по краям
+  align-items: center; // Центрируем по вертикали
+}
+
+.title {
+  font-size: 1.5rem;
+  color: $additional-color-5;
+  margin: 0; // Убираем отступы
+}
+
+.sortOptions {
+  display: flex;
+  align-items: center; // Центрируем кнопки по вертикали
+  position: relative;
+}
+
+.sortButtonWrapper {
+  position: relative; // Позиционирование обертки относительно родителя
+  margin-left: 0.5rem;
+}
+
+.sortButton {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: $additional-color-5;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: $border-radius-small;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.sortIcon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.sortMenu {
+  position: absolute;
+  top: 100%;
+  right: 0; // Выравнивание по правому краю кнопки
+  background-color: $additional-color-1;
+  border-radius: $border-radius-small;
+  padding: 0.5rem;
+  list-style-type: none;
+  margin: 0;
+  box-shadow: $box-shadow-basic;
+  z-index: 100;
+  white-space: nowrap; // Запрет на перенос текста
+  width: auto; // Устанавливаем ширину в auto, чтобы соответствовать содержимому
+
+  li {
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $basic-color-1;
+    }
+  }
+}
+
+.noResults {
+  color: $additional-color-4; // Цвет текста для отсутствия результатов
+  font-size: 1rem; // Размер шрифта
+  margin-top: 1rem; // Отступ сверху
+  text-align: center; // Центрируем текст
+}
+
+/* Добавляем стили для отображения карточек в сетке */
+.announcementList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}

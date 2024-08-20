@@ -8,6 +8,7 @@ import LayoutMain from "./layouts/LayoutMain";
 
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
+import Search from "./pages/Search";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
     <Routes>
       <Route path="/" element={<LayoutMain />}>
         <Route path="" element={<Home />} />
+        <Route path="search" element={<Search />} />
       </Route>
 
       {/* Страница не найдена */}

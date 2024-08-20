@@ -21,7 +21,7 @@ export const Recommendations = () => {
             description={announcement.description} 
             mainPhoto={announcement.main_photo} 
             price={announcement.price} 
-            countViews={announcement.count_views} 
+            countViews={announcement.count_views}
           />
         ))}
       </div>

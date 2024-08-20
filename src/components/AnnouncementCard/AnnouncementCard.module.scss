@@ -1,9 +1,11 @@
 @import "../../scss/variables";
 @import "../../scss/fonts";
 
+$card-height: 200px; // Высота карточки
+
 .card {
   display: flex; // Используем flex для размещения изображения и контента
-  max-height: 200px; // Максимальная высота карточки
+  max-height: $card-height; // Максимальная высота карточки
 //   outline: 1px solid rgba(0, 0, 0, 0.2); // Граница карточки
   box-shadow: $box-shadow-basic;
   border-radius: $border-radius-small; // Скругление углов
@@ -23,8 +25,8 @@
 }
 
 .imageContainer {
-  height: 200px; // Высота контейнера изображения
-  width: 200px; // Ширина контейнера изображения
+  height: $card-height; // Высота контейнера изображения
+  width: $card-height; // Ширина контейнера изображения
   flex-shrink: 0; // Не сжимать контейнер изображения
   position: relative; // Для позиционирования заглушки
 
@@ -54,6 +56,7 @@
   display: flex; // Используем flex для размещения элементов
   flex-direction: column; // Вертикальное расположение элементов
   justify-content: space-between; // Размещаем элементы с равными отступами
+  max-width: calc(100% - $card-height);
 }
 
 .titleContainer {
@@ -66,6 +69,11 @@
   font-size: 1.2rem; // Размер шрифта заголовка
   color: $additional-color-5; // Цвет заголовка
   transition: color 0.3s;
+  
+  // Свойства для обрезки текста
+  white-space: nowrap; // Запрет на перенос текста
+  overflow: hidden; // Скрытие переполненного текста
+  text-overflow: ellipsis; // Добавление многоточия в конце
 }
 
 .icon {
@@ -94,6 +102,11 @@
 .description {
   color: $additional-color-4; // Цвет описания
   margin: 0.5rem 0; // Отступы сверху и снизу
+  display: -webkit-box; // Используем flexbox для ограничения строк
+  -webkit-box-orient: vertical; // Вертикальная ориентация
+  overflow: hidden; // Скрываем переполнение
+  line-clamp: 3; // Ограничиваем до 3 строк
+  -webkit-line-clamp: 3; // Ограничиваем до 3 строк
 }
 
 .footer {
