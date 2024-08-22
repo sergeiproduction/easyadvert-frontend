@@ -1,2 +1,100 @@
 @import "../../scss/variables";
-@import "../../scss/fonts";
+
+.blockFilter {
+  // position: sticky;
+  // top: 100px;
+  background-color: $additional-color-1;
+  padding: 1rem;
+  border-radius: $border-radius-small;
+  box-shadow: $box-shadow-basic;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: $additional-color-5;
+  margin-bottom: 1rem;
+}
+
+.filterGroup {
+  margin-bottom: 1rem;
+
+  h3 {
+    margin-bottom: 0.3rem;
+  }
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.rangeInputGroup {
+  display: flex; // Используем flexbox для размещения полей ввода в одну строку
+  align-items: center; // Центрируем по вертикали
+  width: 100%; // Занимаем всю ширину родителя
+
+  .input {
+    flex: 1; // Поля будут занимать равное пространство
+    padding: 0.5rem;
+    width: 100%;
+
+    &:first-child {
+      border: 1px solid $additional-color-3;
+      border-top-left-radius: $border-radius-small;
+      border-bottom-left-radius: $border-radius-small;
+    }
+
+    &:last-child {
+      border: 1px solid $additional-color-3;
+      border-left: 0;
+      border-top-right-radius: $border-radius-small;
+      border-bottom-right-radius: $border-radius-small;
+    }
+  }
+}
+
+.separator {
+  width: 5px; // Ширина разделителя
+  height: 2.3rem; // Высота разделителя
+  background-color: $additional-color-3; // Цвет разделителя
+}
+
+.showAnnouncementsButton {
+  color: $additional-color-1;
+  font-weight: $font-weight-bold;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: $border-radius-small;
+  cursor: pointer;
+  width: 100%;
+  background: $gradient-1;
+  background-size: 200% 200%; // Увеличиваем размер градиента
+  background-position: 0 0; // Начальная позиция градиента
+  transition: background-position 0.3s ease; // Плавный переход для background-position
+
+  &:hover {
+    background-position: 100% 0; // Изменяем позицию градиента при наведении
+  }
+}
+
+.resetFiltersButton {
+  background: none; // Без фона
+  color: $additional-color-5; // Цвет текста
+  border: none; // Без рамки
+  cursor: pointer; // Указатель при наведении
+  font-size: 1rem; // Размер шрифта
+  margin-top: 1rem; // Отступ сверху
+  width: 100%;
+  text-align: center;
+
+  // &:hover {
+  //   text-decoration: underline; // Подчеркивание при наведении
+  //   color: darken($basic-color-1, 10%); // Темнее при наведении
+  // }
+  transition: color 0.3s; // Плавный эффект тени
+
+  &:hover {
+    color: $basic-color-1;
+  }
+}

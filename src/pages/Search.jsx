@@ -1,5 +1,6 @@
 import React from "react";
 import { BlockSearch } from "../components/BlockSearch";
+import { BlockFilter } from "../components/BlockFilter";
 
 const Search = () => {
   return (
@@ -8,7 +9,7 @@ const Search = () => {
         <BlockSearch />
       </div>
       <div className="rightColumn">
-
+        <BlockFilter />
       </div>
     </div>
   );
