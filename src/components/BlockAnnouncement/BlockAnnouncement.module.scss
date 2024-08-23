@@ -1,0 +1,94 @@
+@import "../../scss/variables";
+
+$img-max-height: 500px;
+
+.blockAnnouncement {
+  // Убираем внешние отступы и добавляем тень и скругление
+  box-shadow: $box-shadow-basic;
+  border-radius: $border-radius-small; // Установили радиус скругления в размер $border-radius-small
+  background-color: $additional-color-1; // Фоновый цвет блока
+  padding: 1.5rem; // Отступы внутри блока
+
+  .imageContainer {
+    background-color: $additional-color-2; // Нейтральный цвет фона
+    border-radius: $border-radius-small; // Скругление углов
+    margin-bottom: 1.5rem; // Отступ снизу
+    height: $img-max-height;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem; // Уменьшили отступ снизу
+
+    .title {
+      font-family: $font-family-primary;
+      font-weight: $font-weight-regular; // Убрали жирность
+      font-size: 1.5rem; // Установили размер заголовка
+      color: $additional-color-5;
+      text-align: left; // Прижимаем заголовок к левой части
+      flex-grow: 1;
+    }
+
+    .dateTime {
+      font-family: $font-family-secondary;
+      font-weight: $font-weight-regular;
+      font-size: 1rem; // Установили размер текста для даты и просмотров
+      color: $additional-color-3;
+      text-align: right;
+      white-space: nowrap;
+
+      .date {
+        margin-right: 0.5rem; // Уменьшили отступ между датой и просмотрами
+      }
+
+      .views {
+        margin-left: 0.5rem; // Добавили отступ слева у слова "просмотров"
+      }
+    }
+  }
+
+  .mainPhoto {
+    width: 100%;
+    max-height: $img-max-height; // Установили максимальную высоту изображения
+    height: auto;
+    border-radius: $border-radius-small; // Установили радиус скругления фотографии в $border-radius-small
+    // object-fit: cover; // Обеспечивает сохранение пропорций изображения
+    object-fit: contain;
+  }
+
+  .imagePlaceholder {
+    width: 100%;
+    height: $img-max-height; // Задаем фиксированную высоту для заглушки
+    background-color: $additional-color-2; // Нейтральный цвет для заглушки
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $additional-color-4; // Цвет текста заглушки
+    font-size: 1rem; // Размер текста заглушки
+    border-radius: $border-radius-small; // Скругление углов заглушки
+  }
+
+  .subtitle {
+    font-family: $font-family-primary;
+    font-weight: $font-weight-regular; // Убрали жирность
+    font-size: 1.25rem; // Установили размер подзаголовка
+    color: $additional-color-5;
+    margin-bottom: 0.5rem; // Уменьшили отступ снизу
+  }
+
+  .description {
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-regular;
+    font-size: 1rem; // Установили размер текста описания
+    color: $additional-color-4;
+    line-height: 1.5;
+  }
+
+  .error {
+    color: $error-color; // Цвет ошибки
+    font-size: 1rem; // Размер текста ошибки
+    text-align: center; // Выравнивание текста ошибки по центру
+  }
+}

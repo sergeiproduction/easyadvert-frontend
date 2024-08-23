@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { MdFavoriteBorder, MdFavorite } from 'react-icons/md'; // Импортируем иконки
+import { Link } from 'react-router-dom'; // Импортируем Link для навигации
 import styles from './AnnouncementCard.module.scss';
 
-export const AnnouncementCard = ({ title, description, mainPhoto, price, countViews }) => {
+export const AnnouncementCard = ({ id, title, description, mainPhoto, price, countViews }) => {
   const [imgError, setImgError] = useState(false); // Состояние для отслеживания ошибки загрузки изображения
   const [isFavorite, setIsFavorite] = useState(false); // Состояние для отслеживания избранного
 
@@ -22,7 +23,7 @@ export const AnnouncementCard = ({ title, description, mainPhoto, price, countVi
   };
 
   return (
-    <div className={styles.card}>
+    <Link to={`/announcement/${id}`} className={styles.card}>
       <div className={styles.imageContainer}>
         {imgError ? (
           <div className={styles.placeholder}>Изображение недоступно</div>
@@ -53,6 +54,6 @@ export const AnnouncementCard = ({ title, description, mainPhoto, price, countVi
           <p className={styles.price}>{price} ₽</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

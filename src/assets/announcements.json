@@ -6,7 +6,7 @@
         "date_publish": "2024-08-01",
         "count_views": 151,
         "title": "Реклама нового продукта",
-        "main_photo": "https://example.com/images/product1.jpg",
+        "main_photo": "/img/test_image_1.jpg",
         "description": "Запустите рекламу нашего нового продукта и получите скидку!",
         "attachments": [
           "https://example.com/images/product1_details.jpg",
@@ -46,7 +46,7 @@
         "date_publish": "2024-08-05",
         "count_views": 200,
         "title": "Специальное предложение на услуги",
-        "main_photo": "https://example.com/images/service1.jpg",
+        "main_photo": "/img/test_image_2.jpg",
         "description": "Получите 20% скидку на наши услуги до конца месяца.",
         "attachments": [],
         "price": 3000,
@@ -83,7 +83,7 @@
         "date_publish": "2024-08-10",
         "count_views": 76,
         "title": "Новая коллекция одежды",
-        "main_photo": "https://example.com/images/clothing1.jpg",
+        "main_photo": "/img/test_image_3.jfif",
         "description": "Посмотрите нашу новую коллекцию одежды для лета.",
         "attachments": [
           "https://example.com/images/clothing1_details.jpg"
@@ -122,7 +122,7 @@
         "date_publish": "2024-08-12",
         "count_views": 123,
         "title": "Скидки на электронику",
-        "main_photo": "https://example.com/images/electronics1.jpg",
+        "main_photo": "/img/test_image_4.webp",
         "description": "Скидки до 30% на всю электронику в магазине.",
         "attachments": [],
         "price": 7000,
@@ -306,7 +306,7 @@
       {
         "id": 9,
         "owner_id": 109,
-        "date_publish": "2024-08-25",
+        "date_publish": "2024-05-1",
         "count_views": 86,
         "title": "Курс по фотографии",
         "main_photo": "https://example.com/images/photo_course1.jpg",

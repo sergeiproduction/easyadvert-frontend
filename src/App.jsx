@@ -9,6 +9,7 @@ import LayoutMain from "./layouts/LayoutMain";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
+import Announcement from "./pages/Announcement";
 
 function App() {
   useEffect(() => {
@@ -25,6 +26,13 @@ function App() {
       <Route path="/" element={<LayoutMain />}>
         <Route path="" element={<Home />} />
         <Route path="search" element={<Search />} />
+
+        <Route path="announcement">
+          <Route index element={<Announcement />} />
+          <Route path="add" element={<Announcement />} />
+          <Route path=":id" element={<Announcement />} />
+          <Route path=":id/edit" element={<Announcement />} />
+        </Route>
       </Route>
 
       {/* Страница не найдена */}
