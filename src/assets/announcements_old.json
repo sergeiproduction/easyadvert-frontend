@@ -2,18 +2,7 @@
     "announcements": [
       {
         "id": 1,
-        "owner": {
-          "id": 101,
-          "role": {
-            "id": 1,
-            "name": "Рекламодатель"
-          },
-          "subject_type": {
-            "id": 1,
-            "name": "Физическое лицо"
-          },
-          "full_name": "Иван Иванов"
-        },
+        "owner_id": 101,
         "date_publish": "2024-08-01",
         "count_views": 151,
         "title": "Реклама нового продукта",
@@ -24,6 +13,22 @@
           "https://example.com/images/product1_video.mp4"
         ],
         "price": 5000,
+        "type_id": 1,
+        "platform_id": 1,
+        "owner": {
+          "id": 101,
+          "role_id": 1,
+          "subject_type_id": 1,
+          "full_name": "Иван Иванов"
+        },
+        "role": {
+          "id": 1,
+          "name": "Рекламодатель"
+        },
+        "subject_type": {
+          "id": 1,
+          "name": "Физическое лицо"
+        },
         "type": {
           "id": 0,
           "name": "sale"
@@ -37,18 +42,7 @@
       },
       {
         "id": 2,
-        "owner": {
-          "id": 102,
-          "role": {
-            "id": 2,
-            "name": "Рекламораспространитель"
-          },
-          "subject_type": {
-            "id": 2,
-            "name": "Юридическое лицо"
-          },
-          "full_name": "Алексей Петров"
-        },
+        "owner_id": 102,
         "date_publish": "2024-08-05",
         "count_views": 200,
         "title": "Специальное предложение на услуги",
@@ -56,6 +50,22 @@
         "description": "Получите 20% скидку на наши услуги до конца месяца.",
         "attachments": [],
         "price": 3000,
+        "type_id": 2,
+        "platform_id": 2,
+        "owner": {
+          "id": 102,
+          "role_id": 2,
+          "subject_type_id": 2,
+          "full_name": "Алексей Петров"
+        },
+        "role": {
+          "id": 2,
+          "name": "Рекламораспространитель"
+        },
+        "subject_type": {
+          "id": 2,
+          "name": "Юридическое лицо"
+        },
         "type": {
           "id": 1,
           "name": "purchase"
@@ -69,18 +79,7 @@
       },
       {
         "id": 3,
-        "owner": {
-          "id": 103,
-          "role": {
-            "id": 1,
-            "name": "Рекламодатель"
-          },
-          "subject_type": {
-            "id": 1,
-            "name": "Физическое лицо"
-          },
-          "full_name": "Мария Смирнова"
-        },
+        "owner_id": 103,
         "date_publish": "2024-08-10",
         "count_views": 76,
         "title": "Новая коллекция одежды",
@@ -90,6 +89,22 @@
           "https://example.com/images/clothing1_details.jpg"
         ],
         "price": 4500,
+        "type_id": 1,
+        "platform_id": 1,
+        "owner": {
+          "id": 103,
+          "role_id": 1,
+          "subject_type_id": 1,
+          "full_name": "Мария Смирнова"
+        },
+        "role": {
+          "id": 1,
+          "name": "Рекламодатель"
+        },
+        "subject_type": {
+          "id": 1,
+          "name": "Физическое лицо"
+        },
         "type": {
           "id": 0,
           "name": "sale"
@@ -103,18 +118,7 @@
       },
       {
         "id": 4,
-        "owner": {
-          "id": 104,
-          "role": {
-            "id": 2,
-            "name": "Рекламораспространитель"
-          },
-          "subject_type": {
-            "id": 2,
-            "name": "Юридическое лицо"
-          },
-          "full_name": "Олег Кузнецов"
-        },
+        "owner_id": 104,
         "date_publish": "2024-08-12",
         "count_views": 123,
         "title": "Скидки на электронику",
@@ -122,6 +126,22 @@
         "description": "Скидки до 30% на всю электронику в магазине.",
         "attachments": [],
         "price": 7000,
+        "type_id": 2,
+        "platform_id": 2,
+        "owner": {
+          "id": 104,
+          "role_id": 2,
+          "subject_type_id": 2,
+          "full_name": "Олег Кузнецов"
+        },
+        "role": {
+          "id": 2,
+          "name": "Рекламораспространитель"
+        },
+        "subject_type": {
+          "id": 2,
+          "name": "Юридическое лицо"
+        },
         "type": {
           "id": 1,
           "name": "purchase"
@@ -135,18 +155,7 @@
       },
       {
         "id": 5,
-        "owner": {
-          "id": 105,
-          "role": {
-            "id": 1,
-            "name": "Рекламодатель"
-          },
-          "subject_type": {
-            "id": 1,
-            "name": "Физическое лицо"
-          },
-          "full_name": "Светлана Васильева"
-        },
+        "owner_id": 105,
         "date_publish": "2024-08-15",
         "count_views": 90,
         "title": "Курс по программированию",
@@ -156,6 +165,22 @@
           "https://example.com/images/course1_details.jpg"
         ],
         "price": 2000,
+        "type_id": 3,
+        "platform_id": 1,
+        "owner": {
+          "id": 105,
+          "role_id": 1,
+          "subject_type_id": 1,
+          "full_name": "Светлана Васильева"
+        },
+        "role": {
+          "id": 1,
+          "name": "Рекламодатель"
+        },
+        "subject_type": {
+          "id": 1,
+          "name": "Физическое лицо"
+        },
         "type": {
           "id": 0,
           "name": "sale"
@@ -169,18 +194,7 @@
       },
       {
         "id": 6,
-        "owner": {
-          "id": 106,
-          "role": {
-            "id": 2,
-            "name": "Рекламораспространитель"
-          },
-          "subject_type": {
-            "id": 2,
-            "name": "Юридическое лицо"
-          },
-          "full_name": "Дмитрий Федоров"
-        },
+        "owner_id": 106,
         "date_publish": "2024-08-18",
         "count_views": 113,
         "title": "Фитнес-программа",
@@ -188,6 +202,22 @@
         "description": "Запишитесь на нашу фитнес-программу и получите бесплатный месяц.",
         "attachments": [],
         "price": 3500,
+        "type_id": 2,
+        "platform_id": 2,
+        "owner": {
+          "id": 106,
+          "role_id": 2,
+          "subject_type_id": 2,
+          "full_name": "Дмитрий Федоров"
+        },
+        "role": {
+          "id": 2,
+          "name": "Рекламораспространитель"
+        },
+        "subject_type": {
+          "id": 2,
+          "name": "Юридическое лицо"
+        },
         "type": {
           "id": 1,
           "name": "purchase"
@@ -201,18 +231,7 @@
       },
       {
         "id": 7,
-        "owner": {
-          "id": 107,
-          "role": {
-            "id": 1,
-            "name": "Рекламодатель"
-          },
-          "subject_type": {
-            "id": 1,
-            "name": "Физическое лицо"
-          },
-          "full_name": "Анна Сергеева"
-        },
+        "owner_id": 107,
         "date_publish": "2024-08-20",
         "count_views": 130,
         "title": "Путешествие в Европу",
@@ -220,6 +239,22 @@
         "description": "Специальные предложения на поездки в Европу.",
         "attachments": [],
         "price": 10000,
+        "type_id": 1,
+        "platform_id": 1,
+        "owner": {
+          "id": 107,
+          "role_id": 1,
+          "subject_type_id": 1,
+          "full_name": "Анна Сергеева"
+        },
+        "role": {
+          "id": 1,
+          "name": "Рекламодатель"
+        },
+        "subject_type": {
+          "id": 1,
+          "name": "Физическое лицо"
+        },
         "type": {
           "id": 0,
           "name": "sale"
@@ -233,18 +268,7 @@
       },
       {
         "id": 8,
-        "owner": {
-          "id": 108,
-          "role": {
-            "id": 1,
-            "name": "Рекламодатель"
-          },
-          "subject_type": {
-            "id": 1,
-            "name": "Физическое лицо"
-          },
-          "full_name": "Елена Громова"
-        },
+        "owner_id": 108,
         "date_publish": "2024-08-22",
         "count_views": 92,
         "title": "Кулинарный мастер-класс",
@@ -252,6 +276,22 @@
         "description": "Запишитесь на наш кулинарный мастер-класс и научитесь готовить.",
         "attachments": [],
         "price": 1500,
+        "type_id": 3,
+        "platform_id": 2,
+        "owner": {
+          "id": 108,
+          "role_id": 1,
+          "subject_type_id": 1,
+          "full_name": "Елена Громова"
+        },
+        "role": {
+          "id": 1,
+          "name": "Рекламодатель"
+        },
+        "subject_type": {
+          "id": 1,
+          "name": "Физическое лицо"
+        },
         "type": {
           "id": 0,
           "name": "sale"
@@ -265,25 +305,30 @@
       },
       {
         "id": 9,
-        "owner": {
-          "id": 109,
-          "role": {
-            "id": 1,
-            "name": "Рекламодатель"
-          },
-          "subject_type": {
-            "id": 1,
-            "name": "Физическое лицо"
-          },
-          "full_name": "Сергей Николаев"
-        },
-        "date_publish": "2024-05-01",
+        "owner_id": 109,
+        "date_publish": "2024-05-1",
         "count_views": 86,
         "title": "Курс по фотографии",
         "main_photo": "https://example.com/images/photo_course1.jpg",
         "description": "Научитесь делать потрясающие фотографии на нашем курсе.",
         "attachments": [],
         "price": 2500,
+        "type_id": 3,
+        "platform_id": 1,
+        "owner": {
+          "id": 109,
+          "role_id": 1,
+          "subject_type_id": 1,
+          "full_name": "Сергей Николаев"
+        },
+        "role": {
+          "id": 1,
+          "name": "Рекламодатель"
+        },
+        "subject_type": {
+          "id": 1,
+          "name": "Физическое лицо"
+        },
         "type": {
           "id": 0,
           "name": "sale"
@@ -297,18 +342,7 @@
       },
       {
         "id": 10,
-        "owner": {
-          "id": 110,
-          "role": {
-            "id": 1,
-            "name": "Рекламодатель"
-          },
-          "subject_type": {
-            "id": 1,
-            "name": "Физическое лицо"
-          },
-          "full_name": "Наталья Романова"
-        },
+        "owner_id": 110,
         "date_publish": "2024-08-28",
         "count_views": 60,
         "title": "Семинар по личностному росту",
@@ -316,6 +350,22 @@
         "description": "Участвуйте в нашем семинаре и откройте новые горизонты.",
         "attachments": [],
         "price": 1800,
+        "type_id": 3,
+        "platform_id": 2,
+        "owner": {
+          "id": 110,
+          "role_id": 1,
+          "subject_type_id": 1,
+          "full_name": "Наталья Романова"
+        },
+        "role": {
+          "id": 1,
+          "name": "Рекламодатель"
+        },
+        "subject_type": {
+          "id": 1,
+          "name": "Физическое лицо"
+        },
         "type": {
           "id": 0,
           "name": "sale"
