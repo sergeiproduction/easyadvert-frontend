@@ -1,0 +1,178 @@
+@import "../../scss/variables";
+
+$img-max-height: 500px;
+
+.blockAnnouncement {
+  box-shadow: $box-shadow-basic;
+  border-radius: $border-radius-small;
+  background-color: $additional-color-1;
+  padding: 1.5rem;
+
+  .header {
+    margin-bottom: 1rem;
+
+    .title {
+      font-family: $font-family-primary;
+      font-weight: $font-weight-bold;
+      font-size: 1.5rem;
+      color: $additional-color-5;
+      text-align: left;
+    }
+  }
+
+  .imageContainer {
+    background-color: $additional-color-2;
+    border-radius: $border-radius-small;
+    margin-bottom: 1.5rem;
+    height: $img-max-height;
+    position: relative; // Для позиционирования кнопки
+
+    .mainPhoto {
+      width: 100%;
+      max-height: $img-max-height;
+      height: auto;
+      border-radius: $border-radius-small;
+      object-fit: contain;
+    }
+
+    .imagePlaceholder {
+      width: 100%;
+      height: $img-max-height;
+      background-color: $additional-color-2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $additional-color-4;
+      font-size: 1rem;
+      border-radius: $border-radius-small;
+      text-align: center; // Центрируем текст
+      padding: 1rem; // Добавляем отступы
+    }
+
+    &.dragOver {
+        outline: 2px dashed $basic-color-1; // Изменяем границу при перетаскивании
+        background-color: rgba(255, 255, 255, 0.1); // Изменяем фон при перетаскивании
+      }
+  }
+
+  .fileInput {
+    width: 100%; // Поле загрузки на всю ширину
+    padding: 0.5rem; // Отступы внутри поля
+    border: 1px solid $additional-color-3; // Цвет границы
+    border-radius: $border-radius-small; // Скругление углов
+    margin-top: 1rem; // Отступ сверху
+    cursor: pointer; // Курсор при наведении
+    display: none; // Скрываем стандартное поле загрузки
+  }
+
+  .uploadButtonContainer {
+    display: flex; // Используем Flexbox для выравнивания
+    justify-content: flex-start; // Выравниваем кнопки по правому краю
+    margin-bottom: 1rem; // Отступ сверху
+    gap: 1rem; // Отступ между кнопками
+  }
+
+  .uploadButton {
+    background-color: $additional-color-2; // Цвет кнопки при наведении
+      color: $additional-color-1; // Цвет текста кнопки
+      font-weight: $font-weight-bold;
+      border: none; // Убираем границу
+      border-radius: $border-radius-small; // Скругление углов
+      padding: 0.5rem 1rem; // Отступы внутри кнопки
+      cursor: pointer; // Курсор при наведении
+      
+      background: $gradient-1;
+      background-size: 200% 200%; // Увеличиваем размер градиента
+      background-position: 0 0; // Начальная позиция градиента
+      transition: background-position 0.3s ease; // Плавный переход для background-position
+  
+      &:hover {
+        background-position: 100% 0; // Изменяем позицию градиента при наведении
+      }
+  }
+
+  .removeButton {
+    background-color: transparent; // Прозрачный фон
+    cursor: pointer; // Курсор при наведении
+    border: none;
+
+    transition: color 0.3s;
+    &:hover {
+      color: $basic-color-1; // Цвет текста кнопки удаления
+    }
+
+    svg {
+      vertical-align: middle;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .subtitle {
+    font-family: $font-family-primary;
+    font-weight: $font-weight-regular;
+    font-size: 1.25rem;
+    color: $additional-color-5;
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base; // Размер шрифта
+    color: $additional-color-4;
+    line-height: 1.5;
+    min-height: 2.5rem;
+    width: 100%; // Поле описания на всю ширину
+    margin-bottom: 1rem; // Отступ снизу
+    padding: 0.5rem; // Отступы внутри поля
+    border: 1px solid $additional-color-3; // Цвет границы
+    border-radius: $border-radius-small; // Скругление углов
+    resize: vertical; // Позволяет изменять размер по вертикали
+
+    &:focus {
+      border-color: $basic-color-1; // Цвет границы при фокусе
+      outline: none; // Убираем стандартный контур
+    }
+  }
+
+  .inputField {
+    width: 100%; // Поля ввода на всю ширину
+    padding: 0.5rem; // Отступы внутри полей
+    border: 1px solid $additional-color-3; // Цвет границы
+    border-radius: $border-radius-small; // Скругление углов
+    font-family: $font-family-primary; // Шрифт
+    font-size: $font-size-base; // Размер шрифта
+    margin-bottom: 1rem; // Отступ снизу
+
+    &:focus {
+      border-color: $basic-color-1; // Цвет границы при фокусе
+      outline: none; // Убираем стандартный контур
+    }
+  }
+
+  .submitButtonContainer {
+    display: flex; // Используем Flexbox для выравнивания
+    justify-content: flex-end; // Выравниваем кнопку по правому краю
+    // margin-bottom: 1rem; // Отступ сверху
+  }
+
+  .submitButton {
+      color: $additional-color-1; // Цвет текста кнопки
+      font-size: $font-size-base; // Размер шрифта
+      font-weight: $font-weight-bold;
+      padding: 0.5rem 1rem; // Отступы внутри кнопки
+      border: none; // Убираем границу
+      border-radius: $border-radius-small; // Скругление углов
+      cursor: pointer; // Курсор при наведении
+      
+      background: $gradient-1;
+      background-size: 200% 200%; // Увеличиваем размер градиента
+      background-position: 0 0; // Начальная позиция градиента
+      transition: background-position 0.3s ease; // Плавный переход для background-position
+  
+      &:hover {
+        background-position: 100% 0; // Изменяем позицию градиента при наведении
+      }
+  }
+}

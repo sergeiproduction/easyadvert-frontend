@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Announcement from "./pages/Announcement";
+import CreateAnnouncement from "./pages/CreateAnnouncement";
 
 function App() {
   useEffect(() => {
@@ -29,7 +30,7 @@ function App() {
 
         <Route path="announcement">
           <Route index element={<Announcement />} />
-          <Route path="add" element={<Announcement />} />
+          <Route path="create" element={<CreateAnnouncement />} />
           <Route path=":id" element={<Announcement />} />
           <Route path=":id/edit" element={<Announcement />} />
         </Route>

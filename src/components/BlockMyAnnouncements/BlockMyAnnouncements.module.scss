@@ -1,0 +1,95 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+$image_size: 50px;
+
+.block {
+  box-shadow: $box-shadow-basic;
+  padding: 1rem;
+  border-radius: $border-radius-small;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.2rem;                       // Размер шрифта заголовка
+  color: $additional-color-5;              // Цвет заголовка
+  margin-bottom: 1rem;
+}
+
+.announcementList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+
+.announcementCard {
+  display: flex;
+  align-items: center;
+  border-radius: $border-radius-small;
+  overflow: hidden;
+
+  &:hover {
+    .name {
+      color: $basic-color-1; // Замените на нужный цвет при наведении
+    }
+  }
+}
+
+.photo {
+  width: $image_size;
+  height: $image_size;
+  object-fit: cover;
+  border-radius: $border-radius-small; // Добавлены скругления
+}
+
+.info {
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  max-width: calc(100% - $image_size);
+}
+
+.name {
+  font-family: $font-family-primary;
+  color: $additional-color-5;
+  // font-weight: $font-weight-medium;
+  font-size: 1rem;
+  margin-bottom: 0.2rem; // Уменьшен отступ между названием и ценой
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1; // Позволяет заголовку занимать доступное пространство
+
+  transition: color 0.3s; // Плавный эффект тени
+}
+
+.price {
+  font-family: $font-family-secondary;
+  // font-weight: $font-weight-bold; 
+  font-size: 0.9rem;
+  color: $additional-color-4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button {
+  display: block;
+  color: $additional-color-1;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.5rem; // Внутренние отступы кнопки 0.5rem
+  border-radius: $border-radius-small;
+  margin-top: 1rem;
+  text-decoration: none;
+
+  background: $gradient-1;
+  background-size: 200% 200%; // Увеличиваем размер градиента
+  background-position: 0 0; // Начальная позиция градиента
+  transition: background-position 0.3s ease; // Плавный переход для background-position
+
+  &:hover {
+    background-position: 100% 0; // Изменяем позицию градиента при наведении
+  }
+}
