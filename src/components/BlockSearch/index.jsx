@@ -122,14 +122,9 @@ export const BlockSearch = () => {
         <p className={styles.noResults}>Нет найденных результатов по вашему запросу.</p>
       ) : (
         filteredAnnouncements.map((announcement) => (
-          <AnnouncementCard
-            key={announcement.id}
-            id={announcement.id}
-            title={announcement.title}
-            description={announcement.description}
-            mainPhoto={announcement.main_photo}
-            price={announcement.price}
-            countViews={announcement.count_views}
+          <AnnouncementCard 
+            key={announcement.id} 
+            {...announcement}
           />
         ))
       )}

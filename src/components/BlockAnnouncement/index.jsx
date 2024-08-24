@@ -51,13 +51,24 @@ export const BlockAnnouncement = () => {
     return `${years} ${yearWord} назад`;
   };
 
+  // Функция для склонения слова "просмотр"
+  const getViewsLabel = (count) => {
+    if (count % 10 === 1 && count % 100 !== 11) {
+      return "просмотр";
+    } else if ((count % 10 >= 2 && count % 10 <= 4) && (count % 100 < 10 || count % 100 >= 20)) {
+      return "просмотра";
+    } else {
+      return "просмотров";
+    }
+  };
+
   return (
     <div className={styles.blockAnnouncement}>
       <div className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
         <div className={styles.dateTime}>
           <span className={styles.date}>{formatDate(date_publish)}</span>
-          <span className={styles.views}>{count_views} просмотров</span>
+          <span className={styles.views}>{count_views} {getViewsLabel(count_views)}</span>
         </div>
       </div>
       <div className={styles.imageContainer}>

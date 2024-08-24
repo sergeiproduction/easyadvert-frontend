@@ -1,39 +1,50 @@
 @import "../../scss/variables";
 @import "../../scss/fonts";
 
-.contactBlock {
+.buttonBlock {
   width: 100%; // Занимает всю ширину родителя
   background-color: $additional-color-1; // Белый фон
   border-radius: $border-radius-small; // Скругленные края
   box-shadow: $box-shadow-basic; // Базовая тень
   padding: 1rem; // Внутренние отступы
   display: flex;
-  flex-direction: column; // Вертикальное расположение элементов
-  align-items: stretch; // Элементы занимают всю ширину
+  justify-content: space-between; // Кнопки распределены по горизонтали
+  margin-bottom: 1rem;
 
-  // Стили для имени контакта
-  & .contactName {
-    margin-bottom: 1rem; // Отступ снизу
-  }
-
-  // Стили для кнопки
-  & .messageButton {
-    width: 100%; // Кнопка на всю ширину
+  // Стили для кнопок
+  & button {
+    flex: 1; // Кнопки занимают равную ширину
     padding: 0.5rem; // Внутренние отступы кнопки
     border: none; // Убираем рамку
     border-radius: $border-radius-small; // Скругленные края
     cursor: pointer; // Указатель при наведении
-    
+    transition: background-color 0.3s; // Плавный переход цвета
+  }
+
+  // Стили для кнопки "В корзину"
+  & .cartButton {
     color: $additional-color-1; // Цвет текста кнопки
     font-weight: $font-weight-bold;
-    
+    margin-right: 0.5rem; // Отступ справа между кнопками
+
     background: $gradient-1;
     background-size: 200% 200%; // Увеличиваем размер градиента
     background-position: 0 0; // Начальная позиция градиента
     transition: background-position 0.3s ease; // Плавный переход для background-position
-  
+
     &:hover {
       background-position: 100% 0; // Изменяем позицию градиента при наведении
+    }
+  }
+
+  // Стили для кнопки "Заказ в 1 клик"
+  & .orderButton {
+    background-color: $additional-color-2; // Цвет кнопки
+    color: $additional-color-4; // Цвет текста кнопки
+    margin-left: 0.5rem; // Отступ слева между кнопками
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
     }
   }
 }

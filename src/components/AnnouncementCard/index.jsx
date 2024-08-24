@@ -3,7 +3,17 @@ import { MdFavoriteBorder, MdFavorite } from 'react-icons/md'; // Импорти
 import { Link } from 'react-router-dom'; // Импортируем Link для навигации
 import styles from './AnnouncementCard.module.scss';
 
-export const AnnouncementCard = ({ id, title, description, mainPhoto, price, countViews }) => {
+export const AnnouncementCard = (props) => {
+  // Деструктурируем необходимые свойства из props
+  const {
+    id,
+    title,
+    description,
+    main_photo: mainPhoto,
+    price,
+    count_views: countViews
+  } = props;
+
   const [imgError, setImgError] = useState(false); // Состояние для отслеживания ошибки загрузки изображения
   const [isFavorite, setIsFavorite] = useState(false); // Состояние для отслеживания избранного
 

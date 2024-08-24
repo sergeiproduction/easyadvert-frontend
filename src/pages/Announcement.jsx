@@ -1,5 +1,7 @@
 import React from "react";
 import { BlockAnnouncement } from "../components/BlockAnnouncement";
+import { AnnouncementButtons } from "../components/AnnouncementButtons";
+import { ContactBlock } from "../components/ContactBlock";
 
 const Announcement = () => {
   return (
@@ -8,7 +10,8 @@ const Announcement = () => {
         <BlockAnnouncement />
       </div>
       <div className="rightColumn">
-
+        <AnnouncementButtons />
+        <ContactBlock />
       </div>
     </div>
   );

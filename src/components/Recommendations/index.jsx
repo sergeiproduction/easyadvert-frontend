@@ -17,12 +17,7 @@ export const Recommendations = () => {
         {filteredAnnouncements.map((announcement) => (
           <AnnouncementCard 
             key={announcement.id} 
-            id={announcement.id}
-            title={announcement.title} 
-            description={announcement.description} 
-            mainPhoto={announcement.main_photo} 
-            price={announcement.price} 
-            countViews={announcement.count_views}
+            {...announcement}
           />
         ))}
       </div>
