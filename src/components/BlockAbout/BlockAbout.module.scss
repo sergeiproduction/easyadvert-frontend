@@ -1,0 +1,65 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.blockAbout {
+  box-shadow: $box-shadow-basic;
+  border-radius: $border-radius-small;
+  background-color: $additional-color-1;
+  padding: 1.5rem;
+  margin: 1.5rem 0; // Отступ сверху и снизу для блока
+
+  .title {
+    font-family: $font-family-primary;
+    font-size: 1.5rem;
+    color: $additional-color-5; // Цвет заголовка
+    margin-bottom: 1rem; // Отступ снизу заголовка
+  }
+
+//   .legalInfo {
+//     font-family: $font-family-secondary;
+//     color: $additional-color-5; // Цвет текста
+//     margin-bottom: 1.5rem; // Отступ снизу от юридической информации
+//   }
+
+//   .mapContainer {
+//     margin-bottom: 1.5rem; // Отступ снизу от карты
+
+//     .mapTitle {
+//       font-family: $font-family-primary;
+//       font-size: 1.25rem;
+//       color: $additional-color-5; // Цвет заголовка карты
+//       margin-bottom: 0.5rem; // Отступ снизу от заголовка карты
+//     }
+
+//     .map {
+//       height: 300px; // Задаем фиксированную высоту для карты
+//       background-color: $additional-color-2; // Цвет фона для карты
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       border-radius: $border-radius-small; // Скругление углов карты
+//       color: $additional-color-4; // Цвет текста внутри карты
+//       overflow: hidden; // Скрываем переполнение
+
+//       iframe {
+//         border: none;
+//         height: 300px;
+//         width: 100%;
+//       }
+//     }
+//   }
+  
+  .supportInfo {
+    font-family: $font-family-secondary;
+    color: $additional-color-4;
+
+    a {
+      color: $basic-color-1; // Цвет ссылок
+      text-decoration: none; // Убираем подчеркивание по умолчанию
+
+      &:hover {
+        text-decoration: underline; // Добавляем подчеркивание при наведении
+      }
+    }
+  }
+}

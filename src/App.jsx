@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Announcement from "./pages/Announcement";
 import CreateAnnouncement from "./pages/CreateAnnouncement";
+import About from "./pages/About";
 
 function App() {
   useEffect(() => {
@@ -34,6 +35,9 @@ function App() {
           <Route path=":id" element={<Announcement />} />
           <Route path=":id/edit" element={<Announcement />} />
         </Route>
+
+        <Route path="about" element={<About />} />
+
       </Route>
 
       {/* Страница не найдена */}

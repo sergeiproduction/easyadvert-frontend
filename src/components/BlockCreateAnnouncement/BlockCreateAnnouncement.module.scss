@@ -13,7 +13,6 @@ $img-max-height: 500px;
 
     .title {
       font-family: $font-family-primary;
-      font-weight: $font-weight-bold;
       font-size: 1.5rem;
       color: $additional-color-5;
       text-align: left;
@@ -25,14 +24,16 @@ $img-max-height: 500px;
     border-radius: $border-radius-small;
     margin-bottom: 1.5rem;
     height: $img-max-height;
+    display: flex; // Используем Flexbox для центрирования
+    justify-content: center; // Центрируем по горизонтали
+    align-items: center; // Центрируем по вертикали
     position: relative; // Для позиционирования кнопки
 
     .mainPhoto {
-      width: 100%;
-      max-height: $img-max-height;
-      height: auto;
+      max-height: 100%; // Ограничиваем высоту изображения
+      max-width: 100%; // Ограничиваем ширину изображения
       border-radius: $border-radius-small;
-      object-fit: contain;
+      object-fit: contain; // Сохраняем пропорции изображения
     }
 
     .imagePlaceholder {
@@ -50,9 +51,9 @@ $img-max-height: 500px;
     }
 
     &.dragOver {
-        outline: 2px dashed $basic-color-1; // Изменяем границу при перетаскивании
-        background-color: rgba(255, 255, 255, 0.1); // Изменяем фон при перетаскивании
-      }
+      outline: 2px dashed $basic-color-1; // Изменяем границу при перетаскивании
+      background-color: rgba(255, 255, 255, 0.1); // Изменяем фон при перетаскивании
+    }
   }
 
   .fileInput {
@@ -74,21 +75,21 @@ $img-max-height: 500px;
 
   .uploadButton {
     background-color: $additional-color-2; // Цвет кнопки при наведении
-      color: $additional-color-1; // Цвет текста кнопки
-      font-weight: $font-weight-bold;
-      border: none; // Убираем границу
-      border-radius: $border-radius-small; // Скругление углов
-      padding: 0.5rem 1rem; // Отступы внутри кнопки
-      cursor: pointer; // Курсор при наведении
-      
-      background: $gradient-1;
-      background-size: 200% 200%; // Увеличиваем размер градиента
-      background-position: 0 0; // Начальная позиция градиента
-      transition: background-position 0.3s ease; // Плавный переход для background-position
-  
-      &:hover {
-        background-position: 100% 0; // Изменяем позицию градиента при наведении
-      }
+    color: $additional-color-1; // Цвет текста кнопки
+    font-weight: $font-weight-bold;
+    border: none; // Убираем границу
+    border-radius: $border-radius-small; // Скругление углов
+    padding: 0.5rem 1rem; // Отступы внутри кнопки
+    cursor: pointer; // Курсор при наведении
+
+    background: $gradient-1;
+    background-size: 200% 200%; // Увеличиваем размер градиента
+    background-position: 0 0; // Начальная позиция градиента
+    transition: background-position 0.3s ease; // Плавный переход для background-position
+
+    &:hover {
+      background-position: 100% 0; // Изменяем позицию градиента при наведении
+    }
   }
 
   .removeButton {
@@ -154,25 +155,24 @@ $img-max-height: 500px;
   .submitButtonContainer {
     display: flex; // Используем Flexbox для выравнивания
     justify-content: flex-end; // Выравниваем кнопку по правому краю
-    // margin-bottom: 1rem; // Отступ сверху
   }
 
   .submitButton {
-      color: $additional-color-1; // Цвет текста кнопки
-      font-size: $font-size-base; // Размер шрифта
-      font-weight: $font-weight-bold;
-      padding: 0.5rem 1rem; // Отступы внутри кнопки
-      border: none; // Убираем границу
-      border-radius: $border-radius-small; // Скругление углов
-      cursor: pointer; // Курсор при наведении
-      
-      background: $gradient-1;
-      background-size: 200% 200%; // Увеличиваем размер градиента
-      background-position: 0 0; // Начальная позиция градиента
-      transition: background-position 0.3s ease; // Плавный переход для background-position
-  
-      &:hover {
-        background-position: 100% 0; // Изменяем позицию градиента при наведении
-      }
+    color: $additional-color-1; // Цвет текста кнопки
+    font-size: $font-size-base; // Размер шрифта
+    font-weight: $font-weight-bold;
+    padding: 0.5rem 1rem; // Отступы внутри кнопки
+    border: none; // Убираем границу
+    border-radius: $border-radius-small; // Скругление углов
+    cursor: pointer; // Курсор при наведении
+
+    background: $gradient-1;
+    background-size: 200% 200%; // Увеличиваем размер градиента
+    background-position: 0 0; // Начальная позиция градиента
+    transition: background-position 0.3s ease; // Плавный переход для background-position
+
+    &:hover {
+      background-position: 100% 0; // Изменяем позицию градиента при наведении
+    }
   }
 }

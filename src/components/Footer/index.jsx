@@ -11,9 +11,9 @@ export const Footer = () => {
           <h3>Навигация</h3>
           <ul>
             <li><Link to="/">Главная</Link></li>
-            <li><Link to="/about">О нас</Link></li>
-            {/* <li><Link to="/services">Услуги</Link></li>
-            <li><Link to="/contact">Контакты</Link></li> */}
+            <li><Link to="/about">О проекте</Link></li>
+            {/* <li><Link to="/services">Услуги</Link></li> */}
+            {/* <li><Link to="/contact">Контакты</Link></li> */}
           </ul>
         </div>
         <div className={styles.contact}>
