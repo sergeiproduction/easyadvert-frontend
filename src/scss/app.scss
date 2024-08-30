@@ -71,3 +71,9 @@ a {
   // Временные свойства
   // border: solid 1px $additional-color-5;
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
