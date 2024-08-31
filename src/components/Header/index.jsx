@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react"; // Импортируем useState и useEffect
-import { Link, useNavigate, useLocation } from "react-router-dom"; // Импортируем Link, useNavigate и useLocation
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { selectIsAuth, logout } from "../../redux/slices/user";
 import styles from "./Header.module.scss";
 import SvgLogo from "../../svg/SvgLogo";
 import {
@@ -9,35 +11,56 @@ import {
   MdOutlineShoppingBasket,
   MdSearch,
 } from "react-icons/md";
-import DOMPurify from 'dompurify'; // Импортируем библиотеку для санитизации
+import DOMPurify from 'dompurify';
 
 const Header = () => {
-  const [searchQuery, setSearchQuery] = useState(""); // Состояние для хранения запроса поиска
-  const navigate = useNavigate(); // Хук для навигации
-  const location = useLocation(); // Хук для получения текущего URL
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const dispatch = useDispatch();
+  const isAuth = useSelector(selectIsAuth);
+  // const userName = useSelector((state) => state.user.data?.name); // Получаем имя пользователя из Redux
+  const userName = "Выйти";
+  const [showLogoutConfirmation, setShowLogoutConfirmation] = useState(false); // Состояние для модального окна
 
-  // Эффект для инициализации строки поиска из URL
   useEffect(() => {
-    const params = new URLSearchParams(location.search); // Получаем параметры из URL
-    const query = params.get("query"); // Извлекаем параметр query
+    const params = new URLSearchParams(location.search);
+    const query = params.get("query");
     if (query) {
-      setSearchQuery(DOMPurify.sanitize(query)); // Санитизируем и устанавливаем значение
+      setSearchQuery(DOMPurify.sanitize(query));
     }
-  }, [location.search]); // Запускаем эффект при изменении URL
+  }, [location.search]);
 
-  // Функция для обработки нажатия кнопки поиска
   const handleSearch = () => {
-    if (searchQuery.trim()) { // Проверяем, что запрос не пустой
-      navigate(`/search?query=${encodeURIComponent(searchQuery)}`); // Перенаправляем на страницу поиска с запросом
+    if (searchQuery.trim()) {
+      navigate(`/search?query=${encodeURIComponent(searchQuery)}`);
     } else {
-      navigate('/search'); // Переход на страницу поиска без параметров
+      navigate('/search');
     }
   };
 
-  // Обработчик нажатия клавиш
   const handleKeyDown = (e) => {
-    if (e.key === "Enter") { // Проверяем, нажата ли клавиша Enter
-      handleSearch(); // Вызываем функцию поиска
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
+
+  // Обработчик выхода из аккаунта
+  const handleLogout = () => {
+    setShowLogoutConfirmation(true); // Показываем модальное окно
+  };
+
+  // Обработчик подтверждения выхода
+  const handleConfirmLogout = () => {
+    setShowLogoutConfirmation(false);
+    dispatch(logout()); // Вызываем действие logout из Redux
+    navigate('/'); // Перенаправляем на главную страницу после выхода
+  };
+
+  // Обработчик клика вне модального окна
+  const handleClickOutside = (e) => {
+    if (e.target.classList.contains(styles.logoutModal)) {
+      setShowLogoutConfirmation(false);
     }
   };
 
@@ -51,22 +74,24 @@ const Header = () => {
           <input 
             type="text" 
             placeholder="Поиск..." 
-            value={searchQuery} // Устанавливаем значение input
-            onChange={(e) => setSearchQuery(e.target.value)} // Обновляем состояние при вводе
-            onKeyDown={handleKeyDown} // Обработчик нажатия клавиш
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
           <button 
             className={styles.searchButton} 
-            onClick={handleSearch} // Обработчик нажатия кнопки
+            onClick={handleSearch}
           >
             <MdSearch className={styles.searchIcon} />
           </button>
         </div>
         <nav className={styles.nav}>
-          <Link to="/login">
-            <MdPersonOutline />
-            Войти
-          </Link>
+          {!isAuth && (
+            <Link to="/login">
+              <MdPersonOutline />
+              Войти
+            </Link>
+          )}
           <Link to="/orders">
             <MdOutlineShoppingBag />
             Заказы
@@ -79,8 +104,25 @@ const Header = () => {
             <MdOutlineShoppingBasket />
             Корзина
           </Link>
+          {isAuth && (
+            <div className={styles.userName} onClick={handleLogout}>
+              {userName}
+            </div>
+          )}
         </nav>
       </div>
+      {/* Модальное окно для подтверждения выхода */}
+      {showLogoutConfirmation && (
+        <div className={styles.logoutModal} onClick={handleClickOutside}>
+          <div className={styles.logoutModalContent}>
+            <h3>Вы уверены, что хотите выйти?</h3>
+            <div className={styles.logoutModalButtons}>
+              <button className={styles.yesButton} onClick={handleConfirmLogout}>Да</button>
+              <button className={styles.noButton} onClick={() => setShowLogoutConfirmation(false)}>Нет</button>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

@@ -1,8 +1,9 @@
 import axios from "axios";
-// import { logout } from "./redux/slices/user";
+import { logout } from "./redux/slices/user";
 
+export const serverURL = "https://easyadvert-backend.onrender.com/";
+// export const serverURL = process.env.REACT_APP_API_URL; // Берем переменную из окружения сервера
 // export const serverURL = "http://26.3.189.182:8000";
-export const serverURL = process.env.REACT_APP_API_URL; // Берем переменную из окружения сервера
 
 const instance = axios.create({
   baseURL: serverURL
@@ -19,7 +20,7 @@ instance.interceptors.response.use(
     (response) => response,
     (error) => {
       if (error.response && error.response.status === 401) {
-        // logout();
+        logout();
         window.localStorage.removeItem("token");
       }
       return Promise.reject(error);
